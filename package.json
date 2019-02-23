@@ -20,5 +20,10 @@
   "homepage": "https://github.com/bbravoc11/saldelarueda#readme",
   "devDependencies": {
     "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
   }
 }
