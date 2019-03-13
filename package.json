@@ -7,14 +7,14 @@
     "start": "npm run watch:all",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "less": "lessc styles.less  styles.css",
-    "watch:less": "onchange \"styles.less\" -- npm run less",
+    "less": "lessc css/styles.less  css/styles.css",
+    "watch:less": "onchange \"css/styles.less\" -- npm run less",
     "watch:all": "parallelshell \"npm run watch:less\" \"npm run lite\"",
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "copyimages": "copyfiles -f img/* dist/img",
     "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
-    "build":"npm run clean && npm run copyfonts && npm run copyimages && npm run usemin"
+    "build": "npm run clean && npm run copyfonts && npm run copyimages && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -29,10 +29,16 @@
   "devDependencies": {
     "copyfiles": "^2.1.0",
     "cssmin": "^0.4.3",
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "htmlmin": "0.0.7",
+    "jit-grunt": "^0.10.0",
     "lite-server": "^2.4.0",
     "onchange": "^5.2.0",
     "parallelshell": "^3.0.1",
+    "time-grunt": "^2.0.0",
     "uglifyjs": "^2.4.11",
     "usemin-cli": "^0.5.1"
   },
